@@ -1,0 +1,372 @@
+@font-face {
+    font-family: MyFont;
+    src: url('./fonts/Inter-VariableFont_slnt\,wght.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: MyFont;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: hsl(36, 100%, 99%);
+}
+
+
+header {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+}
+
+.icon-close {
+    display: none;
+    /* Initially hide */
+}
+
+/* .menu.open .icon-close {
+    display: block; 
+} */
+
+.menu.open .hamburger {
+    display: none;
+    /* Hide hamburger icon when menu is open */
+}
+
+.menu.open {
+    transform: translateX(0);
+    /* Slide in the menu when it's open */
+    right: 0;
+    /* Position menu at the right edge of the screen when open */
+}
+
+.menu {
+    transition: transform 0.3s ease, right 0.3s ease;
+    /* Add transition for sliding effect */
+    right: -100%;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li {
+    margin-left: 50px;
+    list-style: none;
+}
+
+/* 
+ul:last-child{
+    margin-right: -50px;
+} */
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    color: hsl(236, 13%, 42%);
+    transition: all o.2s ease-in-out;
+}
+
+header a:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.main-news {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.image {
+    background-image: url('./images/image-web-3-desktop.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Add a height to the container to ensure it's visible */
+    height: 300px;
+    width: 100%;
+    /* Optional: Set width to ensure full width */
+}
+
+
+.news-title {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.news-title h1 {
+    width: 30%;
+    font-size: 45px;
+    line-height: 1;
+    font-weight: 800;
+}
+
+.news-text {
+    width: 51%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 18px;
+    padding-top: 10px;
+}
+
+.news-text p {
+    font-size: 15px;
+    color: hsl(236, 13%, 42%);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+
+.news-text button {
+    width: 40%;
+    height: 35px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    font-size: 11px;
+    color: hsl(36, 100%, 99%);
+    background-color: hsl(5, 85%, 63%);
+    transition: all 0.2s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
+
+.news-text button:hover {
+    background-color: hsl(240, 100%, 5%);
+
+}
+
+.new-part {
+    width: 35%;
+    height: 100%;
+    margin-left: 30px;
+    padding: 20px 20px 20px 20px;
+    background-color: hsl(240, 100%, 5%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.new-part h1 {
+    color: hsl(35, 77%, 62%);
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.new-article {
+    margin-bottom: 20px;
+    border-bottom: 1px solid hsl(233, 8%, 79%);
+    padding-bottom: 10px;
+}
+
+.new-article:nth-child(4) {
+    border-bottom: none;
+}
+
+.new-article h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: hsl(36, 100%, 99%);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.new-article h4:hover {
+    color: hsl(35, 77%, 62%);
+}
+
+.new-article p {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: hsl(233, 8%, 79%);
+}
+
+.footer {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-article {
+    height: 100px;
+    width: 33%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.foot-article img {
+    height: 100%;
+    margin-right: 15px;
+}
+
+.foot-article-desc {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.foot-article-desc h2 {
+    margin-bottom: 10px;
+    color: hsl(233, 8%, 79%);
+    font-weight: 700;
+}
+
+.foot-article-desc h4 {
+    margin-bottom: 10px;
+    color: hsl(240, 100%, 5%);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.foot-article-desc h4:hover {
+    color: hsl(5, 85%, 63%);
+}
+
+.foot-article-desc p {
+    font-size: 15px;
+    color: hsl(236, 13%, 42%);
+    font-weight: 500;
+}
+
+@media screen and (max-width: 800px) {
+    ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        background-color: hsl(36, 100%, 99%);
+        transform: translateX(100%);
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    li {
+        margin-bottom: 20px;
+    }
+
+    .icon-close {
+        display: none;
+        /* Initially hide the close icon */
+        /* Add styles for close icon */
+    }
+
+    .menu.open .icon-close {
+        display: block;
+        /* Show the close icon when the menu is open */
+        /* Add styles for close icon when menu is open */
+    }
+
+    .menu.open .hamburger {
+        display: none;
+        /* Hide hamburger icon when the menu is open */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .icon-close {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+    }
+
+    header {
+        width: 90%;
+    }
+
+    main {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-news {
+        width: 100%;
+    }
+
+    .news-title {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .news-title h1 {
+        width: 100%;
+        font-size: 40px;
+    }
+
+    .news-text {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .new-part {
+        width: 100%;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .footer {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .foot-article {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .image {
+        background-image: url('./images/image-web-3-mobile.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* Add a height to the container to ensure it's visible */
+        height: 300px;
+        width: 100%;
+        /* Optional: Set width to ensure full width */
+    }
+}
